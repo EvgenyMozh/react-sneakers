@@ -1,28 +1,30 @@
 import React from 'react';
 
-const Drawer = () => {
+const Drawer = ({onClose, items =[]}) => {
     return (
-        <div style={{display: 'none'}} className="overlay">
+        <div className="overlay">
         <div className="drawer">
           <h2 className="mb-30 d-flex justify-between">
             Корзина{" "}
             <img
+            onClick={onClose}
               className="removeBtn cu-p"
               width={32}
               height={32}
               src="/img/btn-remove.svg"
-              alt="Remove"
+              alt="Close"
             />
           </h2>
           <div className="items ">
-            <div className="cartItem d-flex align-center mb-20">
+            {items.map((obj) => (
+              <div className="cartItem d-flex align-center mb-20">
               <div
-                style={{ backgroundImage: "url(/img/sneakers/1.jpg)" }}
+                style={{ backgroundImage: `url(${obj.imageUrl})` }}
                 className="cartItemImg"
               ></div>
               <div className="mr-20 flex">
-                <p className="mb-5">Мужские Кроссовки Nike Blazer Mid Suede</p>
-                <b>12 999 руб.</b>
+                <p className="mb-5">{obj.title}</p>
+                <b>{obj.price} руб.</b>
               </div>
               <img
                 className="removeBtn"
@@ -32,24 +34,7 @@ const Drawer = () => {
                 alt="Remove"
               />
             </div>
-
-            <div className="cartItem d-flex align-center mb-20">
-              <div
-                style={{ backgroundImage: "url(/img/sneakers/1.jpg)" }}
-                className="cartItemImg"
-              ></div>
-              <div className="mr-20 flex">
-                <p className="mb-5">Мужские Кроссовки Nike Blazer Mid Suede</p>
-                <b>12 999 руб.</b>
-              </div>
-              <img
-                className="removeBtn"
-                width={32}
-                height={32}
-                src="/img/btn-remove.svg"
-                alt="Remove"
-              />
-            </div>
+            ))}
           </div>
           <div className="cartTotalBlock">
             <ul>
