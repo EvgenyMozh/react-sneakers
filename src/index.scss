@@ -139,6 +139,11 @@ h1 {
   .greenButton {
     position: relative;
 
+    &:disabled {
+background-color: #bebebe !important;
+cursor: default;
+    }
+
     &:hover {
       img {
         transform: translateX(5px);
