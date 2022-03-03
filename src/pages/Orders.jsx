@@ -37,8 +37,8 @@ const Orders = () => {
             .map((item, index) => (
               <Card
               key={index}
-              onFavorite={(obj) => onAddToFavorite(obj)}
-              onPlus={(obj) => onAddToCart(obj)}
+              /* onFavorite={(obj) => onAddToFavorite(obj)} */
+              /* onPlus={(obj) => onAddToCart(obj)} */
               loading={isLoading}
               {...item}
               />
