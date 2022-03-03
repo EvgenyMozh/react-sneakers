@@ -136,7 +136,7 @@ function App() {
         <Header onClickCart={() => setCartOpened(true)} />
         <Routes>
           <Route
-            path="/"
+            path=""
             exact
             element={
               <Home
@@ -152,8 +152,8 @@ function App() {
             }
           />
 
-          <Route path="/favorites" element={<Favorites />} exact />
-          <Route path="/orders" element={<Orders />} exact />
+          <Route path="favorites" element={<Favorites />} exact />
+          <Route path="orders" element={<Orders />} exact />
         </Routes>
       </div>
     </AppContext.Provider>
