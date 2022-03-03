@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import ContentLoader from "react-content-loader";
 import AppContext from "../../context";
 import styles from "./Card.module.scss";
@@ -50,7 +50,7 @@ const Card = ({
               width={32}
               height={32}
               src={
-                isFavorite ? "/img/heart-liked.svg" : "img/heart-unliked.svg"
+                isFavorite ? "img/heart-liked.svg" : "img/heart-unliked.svg"
               }
               alt="Unliked"
             />
