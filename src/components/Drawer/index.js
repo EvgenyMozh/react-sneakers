@@ -47,7 +47,7 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
             className="removeBtn cu-p"
             width={32}
             height={32}
-            src="/img/btn-remove.svg"
+            src="img/btn-remove.svg"
             alt="Close"
           />
         </h2>
@@ -71,7 +71,7 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
                   <img
                     onClick={() => onRemove(obj.id)}
                     className="removeBtn"
-                    src="/img/btn-remove.svg"
+                    src="img/btn-remove.svg"
                     alt="Remove"
                   />
                 </div>
@@ -95,7 +95,7 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
                 onClick={onClickOreder}
                 className="greenButton"
               >
-                Оформить заказ <img src="/img/arrow.svg" alt="Arrow" />
+                Оформить заказ <img src="img/arrow.svg" alt="Arrow" />
               </button>
             </div>
           </div>
@@ -109,8 +109,8 @@ const Drawer = ({ onClose, onRemove, items = [], opened }) => {
             }
             image={
               isOredrComplete
-                ? "/img/compleate-order.jpg"
-                : "/img/empty-cart.jpg"
+                ? "img/compleate-order.jpg"
+                : "img/empty-cart.jpg"
             }
           />
         )}
