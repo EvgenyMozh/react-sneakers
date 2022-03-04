@@ -50,7 +50,7 @@ const Card = ({
               width={32}
               height={32}
               src={
-                isFavorite ? "img/heart-liked.svg" : "img/heart-unliked.svg"
+                isFavorite ? "/img/heart-liked.svg" : "/img/heart-unliked.svg"
               }
               alt="Unliked"
             />
@@ -68,7 +68,7 @@ const Card = ({
                 className={styles.plus}
                 onClick={onClickPlus}
                 src={
-                  isItemAdded(id) ? "img/btn-checked.svg" : "img/btn-plus.svg"
+                  isItemAdded(id) ? "/img/btn-checked.svg" : "/img/btn-plus.svg"
                 }
                 alt="plus"
               />

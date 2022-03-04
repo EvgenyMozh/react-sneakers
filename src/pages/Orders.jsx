@@ -8,7 +8,7 @@ import AppContext from '../context';
 
 
 const Orders = () => {
-  const { onAddToFavorite, onAddToCart } = useContext(AppContext)
+  /* const { onAddToFavorite, onAddToCart } = useContext(AppContext) */
    const [orders, setOrders] = useState([])
    const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {

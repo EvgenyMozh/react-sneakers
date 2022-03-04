@@ -35,7 +35,7 @@ const Home = ({
           {searchValue ? `Поиск по запросу: "${searchValue}"` : "Все кроссовки"}
         </h1>
         <div className="search-block d-flex align-center">
-          <img width={14} height={14} src="img/search.svg" alt="Search" />
+          <img  src="img/search.svg" alt="Search" />
           {searchValue && (
             <img
               onClick={() => setSearchValue("")}

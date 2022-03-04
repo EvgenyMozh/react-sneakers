@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Drawer from "./components/Drawer";
 import Header from "./components/Header";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import AppContext from "./context";
@@ -134,9 +134,10 @@ function App() {
           />
         
         <Header onClickCart={() => setCartOpened(true)} />
+        
         <Routes>
           <Route
-            path=""
+            path="/"
             exact
             element={
               <Home
@@ -152,9 +153,10 @@ function App() {
             }
           />
 
-          <Route path="favorites" element={<Favorites />} exact />
-          <Route path="orders" element={<Orders />} exact />
+          <Route path="/favorites" element={<Favorites />} exact />
+          <Route path="/orders" element={<Orders />} exact />
         </Routes>
+        
       </div>
     </AppContext.Provider>
   );
